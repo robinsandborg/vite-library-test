@@ -1,0 +1,143 @@
+:root {
+  /* space */
+  --prism-space-0: 0rem;
+  --prism-space-025: 0.125rem;
+  --prism-space-050: 0.25rem;
+  --prism-space-100: 0.5rem;
+  --prism-space-150: 0.75rem;
+  --prism-space-200: 1rem;
+  --prism-space-300: 1.5rem;
+  --prism-space-400: 2rem;
+  --prism-space-500: 2.5rem;
+  --prism-space-600: 3rem;
+  --prism-space-800: 4rem;
+  --prism-space-1000: 5rem;
+
+  /* radius */
+  --prism-radius-0: 0px;
+  --prism-radius-050: 4px;
+  --prism-radius-075: 6px;
+  --prism-radius-100: 8px;
+  --prism-radius-150: 12px;
+  --prism-radius-200: 16px;
+  --prism-radius-300: 24px;
+  --prism-radius-400: 32px;
+  --prism-radius-500: 40px;
+  --prism-radius-600: 48px;
+  --prism-radius-800: 64px;
+  --prism-radius-1000: 80px;
+  --prism-radius-rounded: 1000px;
+
+  /* sizes */
+  --prism-size-0: 0rem;
+  --prism-size-25: 0.125rem;
+  --prism-size-50: 0.25rem;
+  --prism-size-100: 0.5rem;
+  --prism-size-150: 0.75rem;
+  --prism-size-200: 1rem;
+  --prism-size-250: 1.25rem;
+  --prism-size-300: 1.5rem;
+  --prism-size-350: 1.75rem;
+  --prism-size-400: 2rem;
+  --prism-size-450: 2.25rem;
+  --prism-size-500: 2.5rem;
+  --prism-size-600: 3rem;
+  --prism-size-650: 3.5rem;
+  --prism-size-700: 4rem;
+  --prism-size-750: 4.5rem;
+  --prism-size-800: 5rem;
+  --prism-size-850: 5.5rem;
+  --prism-size-900: 6rem;
+  --prism-size-950: 6.5rem;
+  --prism-size-1000: 7rem;
+  --prism-size-1050: 7.5rem;
+  --prism-size-2000: 15rem;
+  --prism-size-4000: 30rem;
+
+  /* targets */
+  --prism-size-target-xsmall: 1.5rem;
+  --prism-size-target-small: 2rem;
+  --prism-size-target-default: 2.5rem;
+
+  /* strokes */
+  --prism-stroke-0: 0px;
+  --prism-stroke-010: 1px;
+  --prism-stroke-025: 2px;
+  --prism-stroke-033: 3px;
+  --prism-stroke-050: 4px;
+  --prism-stroke-075: 6px;
+  --prism-stroke-100: 8px;
+
+  /* typography */
+  --prism-typography-size-xsmall: 0.75rem;
+  --prism-typography-size-small: 0.875rem;
+  --prism-typography-size-default: 1rem;
+  --prism-typography-size-large: 1.125rem;
+  --prism-typography-weight-default: 400;
+  --prism-typography-weight-strong: 500;
+  --prism-typography-weight-xstrong: 600;
+
+  /* colors */
+  --prism-content-default: #1e1e1e;
+  --prism-content-inverse-default: #ffffff;
+  --prism-content-inverse-secondary: #a3a2a2;
+  --prism-content-secondary: #6e7686;
+  --prism-content-tertiary: #a3a2a2;
+  --prism-content-tertiary-inverse: #666464;
+  --prism-content-state-action-dark: #192d8f;
+  --prism-content-state-action-default: #1b4df5;
+  --prism-content-state-action-hover: #1439e1;
+  --prism-content-state-action-light: #5997ff;
+  --prism-content-state-danger-dark: #9f1c15;
+  --prism-content-state-danger-default: #e4251b;
+  --prism-content-state-danger-light: #ffe2e1;
+  --prism-content-state-disabled: #a3a2a2;
+  --prism-content-state-success-default: #1e6d00;
+  --prism-content-state-success-light: #e1f7d8;
+  --prism-content-state-warning-default: #9e3f00;
+  --prism-content-state-warning-light: #fff0cb;
+  --prism-stroke-primary: #b8c4e0;
+  --prism-stroke-secondary: #d4dcec;
+  --prism-stroke-tertiary: #a3a2a2;
+  --prism-stroke-state-action-dark: #172fb6;
+  --prism-stroke-state-action-default: #1b4df5;
+  --prism-stroke-state-action-light: #a2c9ff;
+  --prism-stroke-state-danger-dark: #9f1c15;
+  --prism-stroke-state-danger-default: #e4251b;
+  --prism-stroke-state-danger-light: #ffa6a1;
+  --prism-stroke-state-disabled: #c2c1c1;
+  --prism-stroke-state-success-bold: #1e6d00;
+  --prism-stroke-state-success-light: #7cdd56;
+  --prism-stroke-state-warning-bold: #9e3f00;
+  --prism-stroke-state-warning-light: #ffbb16;
+  --prism-surface-default: #ffffff;
+  --prism-surface-secondary: #f1f3f9;
+  --prism-surface-tertiary: #d4dcec;
+  --prism-surface-panel-default: #ffffff;
+  --prism-surface-panel-level1: #f9f9f9;
+  --prism-surface-panel-level2: #f3f3f3;
+  --prism-surface-panel-level3: #ececec;
+  --prism-surface-panel-level4: #e6e6e6;
+  --prism-surface-panel-level5: #e0e0e0;
+  --prism-surface-state-action-dark: #192d8f;
+  --prism-surface-state-action-default: #2969ff;
+  --prism-surface-state-action-hover: #1b4df5;
+  --prism-surface-state-action-light: #bcd6ff;
+  --prism-surface-state-danger-dark: #c01e15;
+  --prism-surface-state-danger-default: #e4251b;
+  --prism-surface-state-danger-light: #ffe2e1;
+  --prism-surface-state-disabled: #f0f0f0;
+  --prism-surface-state-success-default: #2fa700;
+  --prism-surface-state-success-light: #e1f7d8;
+  --prism-surface-state-warning-default: #ffbb16;
+  --prism-surface-state-warning-light: #fff0cb;
+
+  /* components */
+  --prism-components-button-stroke-width-default: 1px;
+  --prism-components-button-stroke-width-focus-small: 2px;
+  --prism-components-button-stroke-width-thick: 2px;
+  --prism-components-button-stroke-width-focus-default: 3px;
+  --prism-components-button-radius-xsmall: 4px;
+  --prism-components-button-radius-small: 6px;
+  --prism-components-button-radius-default: 8px;
+}

@@ -1,0 +1,237 @@
+@import "../../styles/base.css";
+
+/* Base styles */
+.prism-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: var(--prism-typography-size-small);
+  font-weight: var(--prism-typography-weight-strong);
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+  line-height: 1;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Variants */
+.prism-btn--primary {
+  background-color: var(--prism-surface-state-action-default);
+  color: var(--prism-content-inverse-default);
+  border: var(--prism-components-button-stroke-width-default) solid
+    var(--prism-stroke-state-action-default);
+  box-shadow: inset 0 var(--prism-components-button-stroke-width-default) 0 0
+    rgba(255, 255, 255, 0.35);
+
+  &:hover {
+    background-color: var(--prism-surface-state-action-hover);
+    box-shadow: inset 0 var(--prism-components-button-stroke-width-default) 0 0
+        rgba(255, 255, 255, 0.35),
+      0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  &:focus {
+    box-shadow: inset 0 var(--prism-components-button-stroke-width-default) 0 0
+        rgba(255, 255, 255, 0.35),
+      0 0 0 var(--prism-components-button-stroke-width-focus-default)
+        var(--prism-stroke-state-action-light);
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:focus {
+    cursor: default;
+    background-color: var(--prism-surface-state-disabled);
+    color: var(--prism-content-state-disabled);
+    border: var(--prism-components-button-stroke-width-default) solid
+      var(--prism-surface-state-disabled);
+    box-shadow: none;
+  }
+}
+
+.prism-btn--secondary {
+  background-color: var(--prism-surface-default);
+  color: var(--prism-content-state-action-default);
+  border: var(--prism-components-button-stroke-width-thick) solid
+    var(--prism-stroke-state-action-default);
+
+  &:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 var(--prism-components-button-stroke-width-focus-default)
+      var(--prism-stroke-state-action-light);
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:focus {
+    cursor: default;
+    color: var(--prism-content-state-disabled);
+    border: var(--prism-components-button-stroke-width-thick) solid
+      var(--prism-stroke-state-disabled);
+    box-shadow: none;
+  }
+}
+
+.prism-btn--outline {
+  background-color: var(--prism-surface-default);
+  color: var(--prism-content-default);
+  border: var(--prism-components-button-stroke-width-default) solid
+    var(--prism-stroke-primary);
+
+  &:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  &:focus {
+    border: var(--prism-components-button-stroke-width-default) solid
+      var(--prism-stroke-state-action-default);
+    box-shadow: 0 0 0 var(--prism-components-button-stroke-width-focus-default)
+      var(--prism-stroke-state-action-light);
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:focus {
+    cursor: default;
+    color: var(--prism-content-state-disabled);
+    border: var(--prism-components-button-stroke-width-default) solid
+      var(--prism-stroke-state-disabled);
+    box-shadow: none;
+  }
+}
+
+.prism-btn--link {
+  background-color: transparent;
+  color: var(--prism-content-state-action-default);
+  border: none;
+
+  &:hover {
+    color: var(--prism-content-state-action-dark);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 var(--prism-components-button-stroke-width-focus-default)
+      var(--prism-stroke-state-action-light);
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:focus {
+    cursor: default;
+    color: var(--prism-content-state-disabled);
+    box-shadow: none;
+  }
+}
+
+.prism-btn--danger-primary {
+  background-color: var(--prism-surface-state-danger-default);
+  color: var(--prism-content-inverse-default);
+  border: var(--prism-components-button-stroke-width-default) solid
+    var(--prism-stroke-state-danger-dark);
+  box-shadow: inset 0 var(--prism-components-button-stroke-width-default) 0 0
+    rgba(255, 255, 255, 0.35);
+
+  &:hover {
+    background-color: var(--prism-surface-state-danger-dark);
+    box-shadow: inset 0 var(--prism-components-button-stroke-width-default) 0 0
+        rgba(255, 255, 255, 0.35),
+      0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  &:focus {
+    box-shadow: inset 0 var(--prism-components-button-stroke-width-default) 0 0
+        rgba(255, 255, 255, 0.35),
+      0 0 0 var(--prism-components-button-stroke-width-focus-default)
+        var(--prism-stroke-state-danger-light);
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:focus {
+    cursor: default;
+    background-color: var(--prism-surface-state-disabled);
+    color: var(--prism-content-state-disabled);
+    border: var(--prism-components-button-stroke-width-default) solid
+      var(--prism-surface-state-disabled);
+    box-shadow: none;
+  }
+}
+
+.prism-btn--danger-secondary {
+  background-color: var(--prism-surface-default);
+  color: var(--prism-content-state-danger-default);
+  border: var(--prism-components-button-stroke-width-thick) solid
+    var(--prism-stroke-state-danger-default);
+
+  &:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 var(--prism-components-button-stroke-width-focus-default)
+      var(--prism-stroke-state-danger-light);
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:focus {
+    cursor: default;
+    color: var(--prism-content-state-disabled);
+    border: var(--prism-components-button-stroke-width-thick) solid
+      var(--prism-stroke-state-disabled);
+    box-shadow: none;
+  }
+}
+
+.prism-btn--danger-link {
+  background-color: transparent;
+  color: var(--prism-content-state-danger-default);
+  border: none;
+
+  &:hover {
+    color: var(--prism-content-state-danger-dark);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 var(--prism-components-button-stroke-width-focus-default)
+      var(--prism-stroke-state-danger-light);
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:focus {
+    cursor: default;
+    color: var(--prism-content-state-disabled);
+    box-shadow: none;
+  }
+}
+
+/* Sizes */
+.prism-btn--default {
+  min-height: var(--prism-size-target-default);
+  border-radius: var(--prism-components-button-radius-default);
+  padding: var(--prism-space-100) var(--prism-space-150);
+}
+
+.prism-btn--small {
+  min-height: var(--prism-size-target-small);
+  border-radius: var(--prism-components-button-radius-small);
+  padding: var(--prism-space-100);
+}
+
+.prism-btn--xsmall {
+  min-height: var(--prism-size-target-xsmall);
+  border-radius: var(--prism-components-button-radius-small);
+  padding: var(--prism-space-050);
+  font-size: var(--prism-typography-size-xsmall);
+  line-height: 1;
+}
