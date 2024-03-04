@@ -11,6 +11,7 @@ const buttonVariants = cva(styles["prism-btn"], {
     },
     size: {
       default: styles["prism-btn--default"],
+      small: styles["prism-btn--small"],
     },
   },
   defaultVariants: {
