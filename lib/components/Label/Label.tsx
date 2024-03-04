@@ -41,6 +41,7 @@ const Label = React.forwardRef<
     {hint && <span className={styles["prism-label__hint"]}>{hint}</span>}
   </LabelPrimitive.Root>
 ));
+
 Label.displayName = LabelPrimitive.Root.displayName;
 
 export { Label };
