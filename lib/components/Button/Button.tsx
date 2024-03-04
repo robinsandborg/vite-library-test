@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import styles from "./button.module.css";
-import { cn } from "../../utils";
+import { cn } from "../../../utils/utils";
 
 const buttonVariants = cva(styles["prism-btn"], {
   variants: {

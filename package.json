@@ -6,14 +6,7 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/blocc-prism.cjs",
-  "module": "./dist/blocc-prism.js",
-  "exports": {
-    ".": {
-      "import": "./dist/blocc-prism.js",
-      "require": "./dist/blocc-prism.cjs"
-    }
-  },
+  "main": "./dist/main.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc --p ./tsconfig-build.json && vite build",

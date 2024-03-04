@@ -19,17 +19,17 @@ export default defineConfig({
     copyPublicDir: false,
     lib: {
       entry: resolve(__dirname, "lib/main.ts"),
-      name: "prism-blocc",
-      fileName: "prism-blocc",
+      formats: ["es"],
     },
     rollupOptions: {
       external: ["react", "react-dom", "react/jsx-runtime"],
       input: Object.fromEntries(
+        // https://rollupjs.org/configuration-options/#input
         glob.sync("lib/**/*.{ts,tsx}").map((file) => [
-          // The name of the entry point
-          // lib/nested/foo.ts becomes nested/foo
+          // 1. The name of the entry point
+          // lib/nested/foo.js becomes nested/foo
           relative("lib", file.slice(0, file.length - extname(file).length)),
-          // The absolute path to the entry file
+          // 2. The absolute path to the entry file
           // lib/nested/foo.ts becomes /project/lib/nested/foo.ts
           fileURLToPath(new URL(file, import.meta.url)),
         ])
@@ -37,11 +37,6 @@ export default defineConfig({
       output: {
         assetFileNames: "assets/[name][extname]",
         entryFileNames: "[name].js",
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-          "react/jsx-runtime": "jsx",
-        },
       },
     },
   },
