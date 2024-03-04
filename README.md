@@ -1,30 +1,19 @@
-# React + TypeScript + Vite
+# Vite library test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a test of how to use Vite to build a component library. It provides some different ways to work with the library:
 
-Currently, two official plugins are available:
+## Styling
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The library uses CSS Modules to style the components. This means that the styles are scoped to the component and won't affect the rest of the application. This should work well for micro-frontends and other use cases where you want to avoid style conflicts. The reason for using CSS Modules and not something like Tailwind is that all the CSS is "normal" css, and each component has its own styles. This makes it easier for other consumers of the library, who don't want to use React components, to use the styles.
 
-## Expanding the ESLint configuration
+## Lib
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The lib folder contains the library code, meaning all the components and their styles should live here. This is what we would ship as a package to npm.
 
-- Configure the top-level `parserOptions` property like this:
+## Src
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+The src folder contains both a test application, where you can test the components, scratchpad stuff and play around as well as Storybook stories. The stories are used to document the components and their different states, as well as providing a place for the consumers of the library to get CSS code and examples of how to use the components.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Testing
+
+The library does not contain tests at the moment, but we should add them. With Storybook, we can also integrate with Chromatic in order to provide visual regression testing, which can prove essential to ensure that the library doesn't break when we make changes.
