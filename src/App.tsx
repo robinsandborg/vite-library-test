@@ -1,5 +1,6 @@
-import React from "react";
+import "./reset.css";
 import { Button } from "../lib/components/Button/Button";
+import { Combobox } from "../lib/components";
 
 function App() {
   return (
@@ -23,6 +24,25 @@ function App() {
         <Button type="button" variant="secondary">
           Secondary
         </Button>
+        <Combobox
+          id="foo"
+          label="Combobox"
+          options={[
+            { value: "foo", label: "Foo" },
+            {
+              value: "bar",
+              label: "Bar",
+            },
+            {
+              value: "baz",
+              label: "Baz",
+            },
+            {
+              value: "qux",
+              label: "Qux",
+            },
+          ]}
+        />
       </div>
     </div>
   );

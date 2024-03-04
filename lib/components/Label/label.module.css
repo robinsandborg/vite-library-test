@@ -1,0 +1,32 @@
+/* Base styles */
+.prism-label {
+  font-weight: var(--prism-typography-weight-xstrong);
+  color: var(--prism-content-default);
+}
+
+.prism-label--disabled {
+  color: var(--prism-content-state-disabled);
+}
+
+.prism-label__optional {
+  color: var(--prism-content-secondary);
+  font-weight: var(--prism-typography-weight-default);
+}
+
+.prism-label__hint {
+  color: var(--prism-content-secondary);
+  font-weight: var(--prism-typography-weight-default);
+  font-size: var(--prism-typography-size-xsmall);
+  display: block;
+}
+
+/* Variants */
+
+/* Sizes */
+.prism-label--default {
+  font-size: var(--prism-typography-size-small);
+}
+
+.prism-label--small {
+  font-size: var(--prism-typography-size-xsmall);
+}
