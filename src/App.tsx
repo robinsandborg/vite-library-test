@@ -1,6 +1,7 @@
-import "./reset.css";
-import { Button } from "../lib/components/Button/Button";
-import { Combobox } from "../lib/components";
+import "../lib/styles/base.css";
+import "../lib/styles/reset.css";
+
+import { Button, Combobox } from "../lib/main";
 
 function App() {
   return (

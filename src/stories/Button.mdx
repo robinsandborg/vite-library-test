@@ -1,0 +1,39 @@
+import { Meta, Canvas, Source, Stories } from "@storybook/blocks";
+import * as ButtonStories from "./Button.stories";
+import styles from "../../lib/components/Button/button.module.css";
+
+<Meta of={ButtonStories} />
+
+# Button
+
+The Button component can be used when users want to carry out an action. There are seven different button types in the Prism design system.
+
+      **Primary and secondary** buttons should be used when the action performed by interacting with the button has a clear consequence – think submitting an application, approving a loan or saving information.
+
+      The **outline** variant is primarily for interactions with the UI that don't have a permanent effect. Examples of this are opening a task, filtering the UI and changing the current view.
+
+      **Link** buttons are for buttons that are experienced as links, taking you to a new place in the application. They can also be used as a sort of tertiary action, when you have a primary and secondary button on a row with one or more tertiary actions that can be performed. In this scenario, it's up to the individual designer if they think the **outline** or the **link** variant is most applicable.
+
+      **Danger primary** is for actions with an irrevocable destruvtive effect. These buttons should be used very sparingly as they attract a lot of attention. Most likely, you would want to use the **primary danger** button to confirm a destructive action like deleting a case or removing a user.
+
+      **Danger secondary** can be used for the same action that you would confirm with the primary danger button. It can also be used as a secondary destructive action, for example **danger primary** being used to delete all applications and **danger secondary** deleting only one.
+
+      Danger link is for lesser destructive actions or taking you to a place where you can perform destructive actions. It can also be used for the same action that you would confirm with the primary danger button, in the same way as the secondary danger button.
+
+      Each variant has an "icon only" counterpart. It should be used in the same way as their normal counterparts, and should be used sparingly in places where the user does not necessarily understand what they can be used for. In applications that the user uses every day, these can be effective space savers.
+
+&nbsp;
+
+## Styling
+
+Here you'll find some copyable styles for the button component. You can use these as a starting point for your own styling, or you can use them as they are.
+
+    CSS
+
+    This CSS is intended to be used as a starting point. Depending on your application, and how you want to style it, you will probably need to make some changes to it.
+
+    <Source type="code" language="css" code={styles['prism-btn']} />
+
+## Variants
+
+<Stories of={ButtonStories} />

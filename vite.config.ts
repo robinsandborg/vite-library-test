@@ -6,6 +6,7 @@ import { patchCssModules } from "vite-css-modules";
 import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
 import { libInjectCss } from "vite-plugin-lib-inject-css";
+import copy from "rollup-plugin-copy";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,9 +15,23 @@ export default defineConfig({
     patchCssModules(),
     libInjectCss(),
     dts({ include: ["lib"] }),
+    copy({
+      targets: [
+        { src: "lib/styles/base.css", dest: "dist/styles" },
+        { src: "lib/styles/reset.css", dest: "dist/styles" },
+        {
+          src: "lib/components/**/*.module.css",
+          dest: "dist/styles/components",
+          rename: (name, extention) =>
+            `${name.replace(".module", "")}.${extention}`,
+        },
+      ],
+      hook: "writeBundle", // notice here
+    }),
   ],
   build: {
     copyPublicDir: false,
+    cssMinify: "lightningcss",
     lib: {
       entry: resolve(__dirname, "lib/main.ts"),
       formats: ["es"],
@@ -35,7 +50,7 @@ export default defineConfig({
         ])
       ),
       output: {
-        assetFileNames: "assets/[name][extname]",
+        assetFileNames: "styles/modules/[name][extname]",
         entryFileNames: "[name].js",
       },
     },
